@@ -1,0 +1,18 @@
+*{
+  margin:0;
+  padding:0;
+}
+
+.wrapper{
+  width: 90vw;
+  display: flex;
+  justify-content: center;
+  margin-top: 5vh;
+  gap: 2rem
+}
+
+.inputSection, .outputSection{
+  border: black solid 2px;
+  width: 40%;
+  height: 90vh;
+}
