@@ -1,12 +1,20 @@
-import "../styles/ResumePreview.css";
-export function OutputSection({ input }) {
+import "../styles/OutputSection.css";
+export function OutputSection({ input, sectionType = "general" }) {
   return (
     <>
-      {input.map((obj) => (
-        <p key={obj.key} className={obj.key}>
-          {obj.val}
-        </p>
-      ))}
+      {sectionType === "general" &&
+        input.map((obj) => (
+          <p key={obj.key} className="output-item" id={obj.key}>
+            {obj.val}
+          </p>
+        ))}
+
+      {sectionType === "education" &&
+        input.map((obj) => (
+          <p key={obj.key} className="output-item" id={obj.key}>
+            {obj.val}
+          </p>
+        ))}
     </>
   );
 }

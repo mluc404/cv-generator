@@ -1,0 +1,30 @@
+.inputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+}
+.generalInfoInput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.generalInfoInput .infoElement {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.generalInfoInput input {
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+  border: none;
+  background-color: #dbdbdb;
+  padding: 5px;
+}
+
+input:focus {
+  outline: #3e8bff solid 2px;
+}

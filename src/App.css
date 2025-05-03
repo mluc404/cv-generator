@@ -5,17 +5,21 @@
 }
 
 .wrapper {
-  width: 90vw;
+  width: 100vw;
   display: flex;
   justify-content: center;
   margin-top: 5vh;
-  gap: 2rem;
+  /* gap: 2rem; */
 }
 
-.inputSection,
-.outputSection {
+.inputSection {
   border: black solid 2px;
   width: 40%;
+  height: 90vh;
+}
+.outputSection {
+  border: black solid 2px;
+  width: 60%;
   height: 90vh;
 }
 

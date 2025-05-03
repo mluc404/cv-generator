@@ -1,0 +1,14 @@
+.outputSection {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.generalInfo-output #name {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.fullNameDisplay {
+  /* font-size: 2rem; */
+}
