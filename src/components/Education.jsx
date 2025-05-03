@@ -1,4 +1,5 @@
 import "../styles/Education.css";
+import { sampleData } from "../sampleData";
 
 export function Education({ data, setData, mode = "input" }) {
   const handleInputChange = (e, index, i) => {
@@ -6,31 +7,50 @@ export function Education({ data, setData, mode = "input" }) {
     updatedData[index][i].val = e.target.value;
     setData(updatedData);
   };
+
+  // Functions to add or remove schools
+  const newSchool = sampleData.newSchool;
+  const addSchool = () => {
+    const updatedData = [...data, newSchool];
+    setData(updatedData);
+  };
+  const removeSchool = () => {
+    setData((data) =>
+      data.length > 1 ? data.toSpliced(data.length - 1, 1) : data
+    );
+  };
   return (
     <>
-      {/* DISPLAY INPUT */}
-      {mode === "input" &&
-        data.map((obj, index) => (
-          <div className="school" key={index}>
-            {obj.map((each, i) => (
-              <div key={i} className="infoElement" id={i}>
-                <label htmlFor={each.name} className="inputLabel">
-                  {each.label}
-                </label>
-                <input
-                  name={each.name}
-                  type={each.type}
-                  key={each.key}
-                  value={each.val}
-                  placeholder={each.placeholder}
-                  onChange={(e) => handleInputChange(e, index, i)}
-                />
-              </div>
-            ))}
+      {/* RENDER INPUT */}
+      {mode === "input" && (
+        <div className="schoolList">
+          {data.map((obj, index) => (
+            <div className="school" key={index}>
+              {obj.map((each, i) => (
+                <div key={i} className="infoElement" id={i}>
+                  <label htmlFor={each.name} className="inputLabel">
+                    {each.label}
+                  </label>
+                  <input
+                    name={each.name}
+                    type={each.type}
+                    key={each.key}
+                    value={each.val}
+                    placeholder={each.placeholder}
+                    onChange={(e) => handleInputChange(e, index, i)}
+                  />
+                </div>
+              ))}
+            </div>
+          ))}
+          <div className="buttons">
+            <button onClick={addSchool}>+</button>
+            <button onClick={removeSchool}>-</button>
           </div>
-        ))}
+        </div>
+      )}
 
-      {/* DISPLAY OUTPUT */}
+      {/* RENDER OUTPUT */}
       {mode === "output" &&
         data.map((obj, index) => (
           <div className="schoolOutput" key={index}>

@@ -65,7 +65,7 @@ export const sampleData = {
         key: "startDate",
         val: "09/2020",
         placeholder: "Start Date",
-        label: "Start",
+        label: "Start Date",
       },
       {
         name: "endDate",
@@ -73,7 +73,7 @@ export const sampleData = {
         key: "endDate",
         val: "06/2024",
         placeholder: "End Date",
-        label: "End",
+        label: "End Date",
       },
     ],
   ],
@@ -94,6 +94,14 @@ export const sampleData = {
       val: "",
       placeholder: "Degree",
       label: "Degree",
+    },
+    {
+      name: "location",
+      type: "text",
+      key: "location",
+      val: "",
+      placeholder: "Location",
+      label: "Location",
     },
     {
       name: "startDate",
