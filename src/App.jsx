@@ -3,7 +3,7 @@ import "./App.css";
 // import { InputSection } from "./components/InputSection";
 import { OutputSection } from "./components/OutputSection";
 import "./styles/InputSection.css";
-
+import { sampleData } from "./sampleData";
 // function App() {
 //   // 9:18pm working on OutputSection.jsx to display each section differently
 //   const [inputGeneralInfo, setInputGeneralInfo] = useState([
@@ -175,40 +175,45 @@ import "./styles/InputSection.css";
 import { GeneralInfo } from "./components/GeneralInfo";
 
 function App() {
-  const [inputGeneralInfo, setInputGeneralInfo] = useState([
-    {
-      name: "name",
-      type: "text",
-      key: "name",
-      val: "Minh",
-      placeholder: "Enter Your Name",
-      label: "Full Name",
-    },
-    {
-      name: "phone",
-      type: "tel",
-      key: "phone",
-      val: "(123) 456-7890",
-      placeholder: "Enter Phone Number",
-      label: "Phone Number",
-    },
-    {
-      name: "email",
-      type: "email",
-      key: "email",
-      val: "myEmail@gmail.com",
-      placeholder: "Enter Email",
-      label: "Email",
-    },
-    {
-      name: "location",
-      type: "text",
-      key: "location",
-      val: "San Diego, CA",
-      placeholder: "Enter Your Location",
-      label: "Location",
-    },
-  ]);
+  const [inputGeneralInfo, setInputGeneralInfo] = useState(
+    sampleData.personalInfo
+  );
+
+  // const [inputGeneralInfo, setInputGeneralInfo] = useState([
+  //   {
+  //     name: "name",
+  //     type: "text",
+  //     key: "name",
+  //     val: "My Name",
+  //     placeholder: "Enter Your Name",
+  //     label: "Full Name",
+  //   },
+  //   {
+  //     name: "phone",
+  //     type: "tel",
+  //     key: "phone",
+  //     val: "(123) 456-7890",
+  //     placeholder: "Enter Phone Number",
+  //     label: "Phone Number",
+  //   },
+  //   {
+  //     name: "email",
+  //     type: "email",
+  //     key: "email",
+  //     val: "myEmail@gmail.com",
+  //     placeholder: "Enter Email",
+  //     label: "Email",
+  //   },
+  //   {
+  //     name: "location",
+  //     type: "text",
+  //     key: "location",
+  //     val: "San Diego, CA",
+  //     placeholder: "Enter Your Location",
+  //     label: "Location",
+  //   },
+  // ]);
+
   return (
     <>
       <div className="wrapper">

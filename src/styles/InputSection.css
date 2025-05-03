@@ -28,3 +28,7 @@
 input:focus {
   outline: #3e8bff solid 2px;
 }
+
+.inputLabel {
+  font-weight: 600;
+}

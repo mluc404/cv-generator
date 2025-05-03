@@ -10,7 +10,9 @@ export function GeneralInfo({ data, setData, mode = "input" }) {
       {mode === "input" &&
         data.map((obj, index) => (
           <div key={index} className="infoElement">
-            <label htmlFor={obj.name}>{obj.label}</label>
+            <label htmlFor={obj.name} className="inputLabel">
+              {obj.label}
+            </label>
             <input
               name={obj.name}
               type={obj.type}
