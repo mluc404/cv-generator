@@ -1,5 +1,5 @@
 import "../styles/ResumePreview.css";
-export function ResumePreview({ input }) {
+export function OutputSection({ input }) {
   return (
     <>
       {input.map((obj) => (

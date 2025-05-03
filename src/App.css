@@ -18,3 +18,8 @@
   width: 40%;
   height: 90vh;
 }
+
+button {
+  width: 50px;
+  font-size: 1rem;
+}

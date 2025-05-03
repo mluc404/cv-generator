@@ -1,5 +1,5 @@
 import { useState } from "react";
-export function GeneralInfo({ data, onChange }) {
+export function InputSection({ data, onChange }) {
   return (
     <>
       {data.map((obj) => (
