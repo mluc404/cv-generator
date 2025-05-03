@@ -1,0 +1,15 @@
+.educationOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.schoolOutput {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.schoolDate {
+  display: flex;
+}

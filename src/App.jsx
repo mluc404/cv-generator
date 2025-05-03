@@ -4,6 +4,8 @@ import "./App.css";
 import { OutputSection } from "./components/OutputSection";
 import "./styles/InputSection.css";
 import { sampleData } from "./sampleData";
+import { GeneralInfo } from "./components/GeneralInfo";
+import { Education } from "./components/Education";
 // function App() {
 //   // 9:18pm working on OutputSection.jsx to display each section differently
 //   const [inputGeneralInfo, setInputGeneralInfo] = useState([
@@ -172,12 +174,11 @@ import { sampleData } from "./sampleData";
 
 // export default App;
 
-import { GeneralInfo } from "./components/GeneralInfo";
-
 function App() {
   const [inputGeneralInfo, setInputGeneralInfo] = useState(
     sampleData.personalInfo
   );
+  const [inputEducation, setInputEducation] = useState(sampleData.education);
 
   // const [inputGeneralInfo, setInputGeneralInfo] = useState([
   //   {
@@ -219,15 +220,26 @@ function App() {
       <div className="wrapper">
         <div className="inputSection">
           <div className="generalInfoInput">
+            <h2>Personal Details</h2>
             <GeneralInfo
               data={inputGeneralInfo}
               setData={setInputGeneralInfo}
             />
           </div>
+          <div className="educationInput">
+            <h2>Education</h2>
+            <Education data={inputEducation} setData={setInputEducation} />
+          </div>
         </div>
         <div className="outputSection">
           <div className="generalInfoOutput">
             <GeneralInfo data={inputGeneralInfo} mode="output" />
+          </div>
+          <div className="detailedInfoOutput">
+            <div className="educationOutput">
+              <h3>Education</h3>
+              <Education data={inputEducation} mode="output" />
+            </div>
           </div>
         </div>
       </div>

@@ -17,9 +17,9 @@ body {
 .inputSection {
   width: 30%;
   /* height: 90vh; */
-  background-color: white;
-  filter: drop-shadow(5px 5px 5px #858585);
-  border-radius: 10px;
+  /* background-color: white; */
+  /* filter: drop-shadow(5px 5px 5px #858585); */
+  /* border-radius: 10px; */
 }
 .outputSection {
   flex-grow: 1;
@@ -31,4 +31,8 @@ body {
 button {
   width: 50px;
   font-size: 1rem;
+}
+
+.detailedInfoOutput {
+  padding: 20px;
 }
