@@ -19,3 +19,14 @@
   flex-direction: column;
   gap: 2rem;
 }
+
+.school {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.school .infoElement:nth-last-of-type(-n + 2) {
+  /* color: red; */
+  /* display: inline-table; */
+}

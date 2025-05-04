@@ -5,14 +5,14 @@
   /* padding: 10px; */
   /* background-color: transparent; */
 }
-.generalInfoInput,
+.personalInfoInput,
 .educationInput {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   background-color: white;
   filter: drop-shadow(5px 5px 5px #858585);
-  border-radius: 10px;
+  border-radius: 14px;
   padding: 1rem;
 }
 
@@ -24,8 +24,7 @@
 
 .inputSection input {
   font-size: 0.9rem;
-  border-radius: 5px;
-  outline: none;
+  border-radius: 8px;
   border: none;
   background-color: #e5e5e5;
   padding: 5px;
@@ -38,10 +37,4 @@ input:focus {
 
 .inputLabel {
   font-weight: 600;
-}
-
-.school {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
 }

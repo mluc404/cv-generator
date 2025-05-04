@@ -1,4 +1,5 @@
-export function GeneralInfo({ data, setData, mode = "input" }) {
+import "../styles/PersonalInfo.css";
+export function PersonalInfo({ data, setData, mode = "input" }) {
   const handleInputChange = (e, index) => {
     const updatedData = [...data];
     updatedData[index].val = e.target.value;

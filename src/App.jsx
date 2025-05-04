@@ -1,11 +1,14 @@
 import { useState } from "react";
-import "./App.css";
-// import { InputSection } from "./components/InputSection";
-import { OutputSection } from "./components/OutputSection";
-import "./styles/InputSection.css";
+
 import { sampleData } from "./sampleData";
-import { GeneralInfo } from "./components/GeneralInfo";
+import { PersonalInfo } from "./components/PersonalInfo";
 import { Education } from "./components/Education";
+import { Experience } from "./components/Experience";
+
+import "./App.css";
+import "./styles/InputSection.css";
+import "./styles/OutputSection.css";
+
 // function App() {
 //   // 9:18pm working on OutputSection.jsx to display each section differently
 //   const [inputGeneralInfo, setInputGeneralInfo] = useState([
@@ -175,7 +178,7 @@ import { Education } from "./components/Education";
 // export default App;
 
 function App() {
-  const [inputGeneralInfo, setInputGeneralInfo] = useState(
+  const [inputPersonalInfo, setInputPersonalInfo] = useState(
     sampleData.personalInfo
   );
   const [inputEducation, setInputEducation] = useState(sampleData.education);
@@ -219,11 +222,11 @@ function App() {
     <>
       <div className="wrapper">
         <div className="inputSection">
-          <div className="generalInfoInput">
+          <div className="personalInfoInput">
             <h2>Personal Details</h2>
-            <GeneralInfo
-              data={inputGeneralInfo}
-              setData={setInputGeneralInfo}
+            <PersonalInfo
+              data={inputPersonalInfo}
+              setData={setInputPersonalInfo}
             />
           </div>
           <div className="educationInput">
@@ -232,8 +235,8 @@ function App() {
           </div>
         </div>
         <div className="outputSection">
-          <div className="generalInfoOutput">
-            <GeneralInfo data={inputGeneralInfo} mode="output" />
+          <div className="personalInfoOutput">
+            <PersonalInfo data={inputPersonalInfo} mode="output" />
           </div>
           <div className="detailedInfoOutput">
             <div className="educationOutput">
