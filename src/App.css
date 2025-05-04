@@ -4,14 +4,14 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 body {
-  padding: 20px;
+  padding: 2rem;
   background-color: #dadada;
 }
 .wrapper {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 1rem;
+  gap: 2rem;
 }
 
 .inputSection {
@@ -19,7 +19,7 @@ body {
 }
 .outputSection {
   flex-grow: 1;
-  height: 90vh;
+  height: 100vh;
   background-color: white;
   filter: drop-shadow(5px 5px 5px #858585);
 }

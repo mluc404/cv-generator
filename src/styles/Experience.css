@@ -17,3 +17,11 @@ textarea:focus {
   flex-direction: column;
   gap: 10px;
 }
+
+.schoolName .infoElement:nth-last-child(-n + 4) {
+  color: red;
+}
+
+/* .schoolName {
+  color: blue;
+} */

@@ -68,28 +68,28 @@ export function Experience({ data, setData, mode = "input" }) {
           <div className="schoolOutput" key={index}>
             <div className="schoolName">
               {obj.map((each, i) => (
-                <div key={i} className="infoElement" id={i}>
+                // <div key={i} className="infoElement" id={i}>
+                <>
                   {each.name === "company" ? (
                     <h4>{each.val}</h4>
-                  ) : each.name === "position" ? (
-                    <p>{each.val}</p>
-                  ) : each.name === "location" ? (
-                    <p>{each.val}</p>
-                  ) : each.name === "description" ? (
+                  ) : each.name === "position" ||
+                    each.name === "location" ||
+                    each.name === "description" ? (
                     <p>{each.val}</p>
                   ) : null}
-                </div>
+                </>
+                // </div>
               ))}
             </div>
             <div className="schoolDate">
               {obj.map((each, i) => (
-                <div key={i} className="infoElement" id={i}>
+                <>
                   {each.name === "startDate" ? (
                     <p>{each.val}</p>
                   ) : each.name === "endDate" ? (
                     <p>&nbsp;- {each.val}</p>
                   ) : null}
-                </div>
+                </>
               ))}
             </div>
           </div>

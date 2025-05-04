@@ -26,11 +26,10 @@
   gap: 0.5rem;
 }
 
-.school .infoElement:nth-last-of-type(-n + 2) {
-  /* color: red; */
-  /* display: inline-table; */
-}
-
 h3 {
   border-bottom: #4c4c4c solid 2px;
+}
+
+.schoolName p:nth-last-child(-n + 2) {
+  /* color: red; */
 }

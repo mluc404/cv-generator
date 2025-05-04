@@ -7,7 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "predeploy1": "git checkout gh-pages && git merge main --no-edit",
+    "predeploy2": "git add dist -f && git commit -m 'Deployment commit'",
+    "deploy": "git subtree push --prefix dist origin gh-pages && git checkout main"
   },
   "dependencies": {
     "react": "^19.0.0",
