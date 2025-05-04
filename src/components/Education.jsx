@@ -73,7 +73,7 @@ export function Education({ data, setData, mode = "input" }) {
                   {each.name === "startDate" ? (
                     <p>{each.val}</p>
                   ) : each.name === "endDate" ? (
-                    <p> - {each.val}</p>
+                    <p>&nbsp;- {each.val}</p>
                   ) : null}
                 </div>
               ))}

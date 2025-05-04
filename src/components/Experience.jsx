@@ -10,12 +10,12 @@ export function Experience({ data, setData, mode = "input" }) {
   };
 
   // Functions to add or remove schools
-  const newSchool = sampleData.newSchool;
-  const addSchool = () => {
-    const updatedData = [...data, newSchool];
+  const newJob = sampleData.newJob;
+  const addJob = () => {
+    const updatedData = [...data, newJob];
     setData(updatedData);
   };
-  const removeSchool = () => {
+  const removeJob = () => {
     setData((data) =>
       data.length > 1 ? data.toSpliced(data.length - 1, 1) : data
     );
@@ -56,8 +56,8 @@ export function Experience({ data, setData, mode = "input" }) {
             </div>
           ))}
           <div className="buttons">
-            <button onClick={addSchool}>+</button>
-            <button onClick={removeSchool}>-</button>
+            <button onClick={addJob}>+</button>
+            <button onClick={removeJob}>-</button>
           </div>
         </div>
       )}
@@ -87,7 +87,7 @@ export function Experience({ data, setData, mode = "input" }) {
                   {each.name === "startDate" ? (
                     <p>{each.val}</p>
                   ) : each.name === "endDate" ? (
-                    <p> - {each.val}</p>
+                    <p>&nbsp;- {each.val}</p>
                   ) : null}
                 </div>
               ))}
