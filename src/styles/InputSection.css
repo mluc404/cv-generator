@@ -5,8 +5,7 @@
   /* padding: 10px; */
   /* background-color: transparent; */
 }
-.personalInfoInput,
-.educationInput {
+.inputBlock {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;

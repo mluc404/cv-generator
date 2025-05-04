@@ -120,4 +120,49 @@ export const sampleData = {
       label: "End",
     },
   ],
+
+  experience: [
+    [
+      {
+        name: "company",
+        type: "text",
+        key: "company",
+        val: "Facebook",
+        placeholder: "Company",
+        label: "Company",
+      },
+      {
+        name: "position",
+        type: "text",
+        key: "position",
+        val: "Software Engineer",
+        placeholder: "Position",
+        label: "Position",
+      },
+      {
+        name: "description",
+        type: "textarea",
+        key: "description",
+        val: "Make Zuck rich ",
+        placeholder: "Description",
+        label: "Description",
+      },
+      {
+        name: "startDate",
+        type: "textarea",
+        key: "startDate",
+        val: "05/2020",
+        placeholder: "startDate",
+        label: "Start Date",
+      },
+      {
+        name: "endDate",
+        type: "textarea",
+        key: "endDate",
+        val: "Current",
+        placeholder: "endDate",
+        label: "End Date",
+      },
+    ],
+  ],
 };

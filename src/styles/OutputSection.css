@@ -2,3 +2,9 @@
   display: grid;
   grid-template-rows: 1fr 5fr;
 }
+
+.detailedInfoOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

@@ -1,4 +1,4 @@
-// import "../styles/Education.css";
+import "../styles/Experience.css";
 
 import { sampleData } from "../sampleData";
 
@@ -32,14 +32,25 @@ export function Experience({ data, setData, mode = "input" }) {
                   <label htmlFor={each.name} className="inputLabel">
                     {each.label}
                   </label>
-                  <input
-                    name={each.name}
-                    type={each.type}
-                    key={each.key}
-                    value={each.val}
-                    placeholder={each.placeholder}
-                    onChange={(e) => handleInputChange(e, index, i)}
-                  />
+                  {each.name === "description" ? (
+                    <textarea
+                      name={each.name}
+                      type={each.type}
+                      key={each.key}
+                      value={each.val}
+                      placeholder={each.placeholder}
+                      onChange={(e) => handleInputChange(e, index, i)}
+                    ></textarea>
+                  ) : (
+                    <input
+                      name={each.name}
+                      type={each.type}
+                      key={each.key}
+                      value={each.val}
+                      placeholder={each.placeholder}
+                      onChange={(e) => handleInputChange(e, index, i)}
+                    />
+                  )}
                 </div>
               ))}
             </div>
@@ -58,11 +69,13 @@ export function Experience({ data, setData, mode = "input" }) {
             <div className="schoolName">
               {obj.map((each, i) => (
                 <div key={i} className="infoElement" id={i}>
-                  {each.name === "schoolName" ? (
+                  {each.name === "company" ? (
                     <h4>{each.val}</h4>
-                  ) : each.name === "degree" ? (
+                  ) : each.name === "position" ? (
                     <p>{each.val}</p>
                   ) : each.name === "location" ? (
+                    <p>{each.val}</p>
+                  ) : each.name === "description" ? (
                     <p>{each.val}</p>
                   ) : null}
                 </div>

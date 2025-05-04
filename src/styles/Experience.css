@@ -1,0 +1,19 @@
+textarea {
+  height: 100px;
+  font-size: 0.9rem;
+  border-radius: 8px;
+  border: none;
+  background-color: #e5e5e5;
+  padding: 5px;
+  line-height: 1.2rem;
+}
+
+textarea:focus {
+  outline: #3e8bff solid 2px;
+}
+
+.experienceOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
