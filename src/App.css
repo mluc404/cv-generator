@@ -37,6 +37,15 @@ body {
   padding-bottom: 2rem;
 }
 
+@media print {
+  .outputSection {
+    box-shadow: none !important;
+    filter: none !important;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 .buttons {
   display: flex;
   gap: 10px;
@@ -64,7 +73,7 @@ button:hover {
   gap: 20px;
   width: 90%;
 }
-
+/* 
 .myLink {
   display: flex;
   justify-content: center;
@@ -86,4 +95,4 @@ button:hover {
 
 a:hover {
   cursor: pointer;
-}
+} */

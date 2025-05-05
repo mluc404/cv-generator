@@ -1,9 +1,12 @@
-import { useState } from "react";
+import { useState, useRef, use } from "react";
+import { useReactToPrint } from "react-to-print";
 
 import { sampleData } from "./sampleData";
 import { PersonalInfo } from "./components/PersonalInfo";
 import { Education } from "./components/Education";
 import { Experience } from "./components/Experience";
+
+import githubLogo from "../public/github-mark.png";
 
 import "./App.css";
 import "./styles/InputSection.css";
@@ -14,6 +17,9 @@ function App() {
   );
   const [inputEducation, setInputEducation] = useState(sampleData.education);
   const [inputExperience, setInputExperience] = useState(sampleData.experience);
+
+  const contentRef = useRef();
+  const reactToPrintFn = useReactToPrint({ contentRef });
 
   return (
     <>
@@ -34,10 +40,26 @@ function App() {
             <h2>Experience</h2>
             <Experience data={inputExperience} setData={setInputExperience} />
           </div>
+          {/* Print resume */}
+          <div className="outputButtons">
+            <button onClick={reactToPrintFn} className="printBtn">
+              &#x1F5A8;
+            </button>
+            <div className="githubLink">
+              <a href="https://github.com/mluc404/cv-generator">
+                <img
+                  src={githubLogo}
+                  alt="GitHub logo"
+                  className="githubLogo"
+                />
+                {/* <span>mluc404</span> */}
+              </a>
+            </div>
+          </div>
         </div>
 
         {/* >>>>>>>>>>>>>> OUTPUT SECTION <<<<<<<<<<<<<<<<< */}
-        <div className="outputSection">
+        <div className="outputSection" ref={contentRef}>
           <div className="personalInfoOutput">
             <PersonalInfo data={inputPersonalInfo} mode="output" />
           </div>

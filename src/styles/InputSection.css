@@ -1,6 +1,7 @@
 .inputSection {
   display: flex;
   flex-direction: column;
+  /* justify-content: center; */
   gap: 1.5rem;
 }
 .inputBlock {
@@ -34,4 +35,37 @@ input:focus {
 
 .inputLabel {
   font-weight: 600;
+}
+
+.outputButtons {
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  gap: 1rem;
+  color: #0d163a;
+  /* padding-left: 0.5rem; */
+}
+
+.printBtn {
+  width: 2.8rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 5px;
+  outline: #0d163a solid 2px;
+}
+
+.githubLink {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+}
+
+.githubLink img {
+  width: 2.6rem;
+}
+
+.githubLink a {
+  display: flex;
 }
