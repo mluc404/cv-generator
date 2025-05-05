@@ -1,19 +1,4 @@
-.educationOutput {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.schoolOutput {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-}
-
-.schoolDate {
-  display: flex;
-}
-
+/* STYLE INPUT */
 .schoolList {
   display: flex;
   flex-direction: column;
@@ -30,6 +15,4 @@ h3 {
   border-bottom: #4c4c4c solid 2px;
 }
 
-.schoolName p:nth-last-child(-n + 2) {
-  /* color: red; */
-}
+/* ////////////////////////////////////// */

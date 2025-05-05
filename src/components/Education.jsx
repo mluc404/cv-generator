@@ -51,7 +51,7 @@ export function Education({ data, setData, mode = "input" }) {
       )}
 
       {/* RENDER OUTPUT */}
-      {mode === "output" &&
+      {/* {mode === "output" &&
         data.map((obj, index) => (
           <div className="schoolOutput" key={index}>
             <div className="schoolName">
@@ -79,7 +79,57 @@ export function Education({ data, setData, mode = "input" }) {
               ))}
             </div>
           </div>
-        ))}
+        ))} */}
+      {/* //////////////////////////////////////// */}
+      {/* //////////////////////////////////////// */}
+      {/* //////////////////////////////////////// */}
+      {/* REFACTOR RENDER OUTPUT */}
+      {mode === "output" && (
+        <div className="schoolOutput">
+          {data.map((obj, index) => {
+            const schoolNameDegree = obj.filter(
+              (item) => item.name === "schoolName" || item.name === "degree"
+            );
+            console.log(schoolNameDegree);
+
+            const schoolDate = obj.filter(
+              (item) => item.name === "startDate" || item.name === "endDate"
+            );
+            const schoolLoc = obj.filter((item) => item.name === "location");
+
+            return (
+              <div className="schoolUnit">
+                <div className="schoolLeftPart">
+                  {schoolNameDegree.map((each, i) =>
+                    each.name === "schoolName" ? (
+                      <h4>{each.val}</h4>
+                    ) : (
+                      <p>{each.val}</p>
+                    )
+                  )}
+                </div>
+
+                <div className="schoolRightPart">
+                  <div className="schoolDate">
+                    {schoolDate.map((each, i) =>
+                      each.name === "startDate" ? (
+                        <p>{each.val}</p>
+                      ) : (
+                        <p>&nbsp;-{each.val}</p>
+                      )
+                    )}
+                  </div>
+                  <div className="schoolLoc">
+                    {schoolLoc.map((each, i) => (
+                      <p>{each.val}</p>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            );
+          })}
+        </div>
+      )}
     </>
   );
 }

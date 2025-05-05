@@ -119,6 +119,7 @@ export function Experience({ data, setData, mode = "input" }) {
           const jobCompany = obj.filter(
             (item) => item.name === "company" || item.name === "position"
           );
+
           const jobDate = obj.filter(
             (item) => item.name === "startDate" || item.name === "endDate"
           );
