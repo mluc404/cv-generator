@@ -13,11 +13,11 @@ textarea:focus {
 }
 
 /* STYLE OUTPUT */
-
 .experienceOutput {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  width: 100%;
 }
 
 .jobList {
