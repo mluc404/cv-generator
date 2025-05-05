@@ -25,12 +25,12 @@ export const sampleData = {
       label: "Email",
     },
     {
-      name: "location",
+      name: "website",
       type: "text",
-      key: "location",
-      val: "San Diego, CA",
-      placeholder: "Enter Your Location",
-      label: "Location",
+      key: "website",
+      val: "github.com/mluc404",
+      placeholder: "Enter Your Website",
+      label: "Website",
     },
   ],
   education: [

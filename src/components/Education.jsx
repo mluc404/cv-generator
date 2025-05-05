@@ -51,39 +51,6 @@ export function Education({ data, setData, mode = "input" }) {
       )}
 
       {/* RENDER OUTPUT */}
-      {/* {mode === "output" &&
-        data.map((obj, index) => (
-          <div className="schoolOutput" key={index}>
-            <div className="schoolName">
-              {obj.map((each, i) => (
-                <>
-                  {each.name === "schoolName" ? (
-                    <h4>{each.val}</h4>
-                  ) : each.name === "degree" ? (
-                    <p>{each.val}</p>
-                  ) : each.name === "location" ? (
-                    <p>{each.val}</p>
-                  ) : null}
-                </>
-              ))}
-            </div>
-            <div className="schoolDate">
-              {obj.map((each, i) => (
-                <>
-                  {each.name === "startDate" ? (
-                    <p>{each.val}</p>
-                  ) : each.name === "endDate" ? (
-                    <p>&nbsp;- {each.val}</p>
-                  ) : null}
-                </>
-              ))}
-            </div>
-          </div>
-        ))} */}
-      {/* //////////////////////////////////////// */}
-      {/* //////////////////////////////////////// */}
-      {/* //////////////////////////////////////// */}
-      {/* REFACTOR RENDER OUTPUT */}
       {mode === "output" && (
         <div className="schoolOutput">
           {data.map((obj, index) => {

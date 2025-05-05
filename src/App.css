@@ -5,7 +5,10 @@
 }
 body {
   padding: 2rem;
+  padding-bottom: 0;
   background-color: #dadada;
+  display: grid;
+  grid-template-rows: 1fr 2rem;
 }
 .wrapper {
   width: 100%;
@@ -58,4 +61,27 @@ button:hover {
   align-items: center;
   gap: 20px;
   width: 90%;
+}
+
+.myLink {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding-bottom: 5px;
+}
+
+.githubLogo {
+  width: 1rem;
+}
+
+.myLink a {
+  font-size: 0.9rem;
+  color: #013057;
+  display: flex;
+  align-items: center;
+  gap: 2px;
+}
+
+a:hover {
+  cursor: pointer;
 }

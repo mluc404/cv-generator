@@ -5,6 +5,12 @@ export function PersonalInfo({ data, setData, mode = "input" }) {
     updatedData[index].val = e.target.value;
     setData(updatedData);
   };
+
+  const fullName = data.find((item) => item.name === "name");
+  const contact = data.filter((item) =>
+    ["phone", "email", "website"].includes(item.name)
+  );
+
   return (
     <>
       {/* DISPLAY INPUT */}
@@ -25,29 +31,28 @@ export function PersonalInfo({ data, setData, mode = "input" }) {
           </div>
         ))}
 
-      {/* DISPLAY OUTPUT */}
-      {mode === "output" &&
-        data.map(
-          (obj) =>
-            obj.key === "name" && (
-              <div className="fullNameDisplay" key={obj.key}>
-                {obj.val}
-              </div>
-            )
-        )}
+      {/*OUTPUT RENDER */}
       {mode === "output" && (
-        <div className="contactInfo">
-          {data
-            .filter((obj) => obj.name !== "name")
-            .map(
-              (each) =>
-                //   <p key={each.key} className="output-item" id={each.key}>
-                //     {each.val}
-                //   </p>
-                each.val
-            )
-            .join(" | ")}
-        </div>
+        <>
+          <div className="fullNameDisplay">
+            {fullName && <h4>{fullName.val}</h4>}
+          </div>
+          <div className="contactInfo">
+            {contact.map((item, i) =>
+              item.name === "website" ? (
+                <a
+                  href={`https://${item.val}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  {item.val}
+                </a>
+              ) : (
+                <p>{item.val}&nbsp;|&nbsp;</p>
+              )
+            )}
+          </div>
+        </>
       )}
     </>
   );
