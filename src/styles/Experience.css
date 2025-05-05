@@ -51,3 +51,8 @@ textarea:focus {
 .jobBottomPart {
   padding: 0 0.5rem;
 }
+
+.jobDescription {
+  white-space: pre-wrap;
+  /* text-align: justify; */
+}
