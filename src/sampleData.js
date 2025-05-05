@@ -219,7 +219,7 @@ export const sampleData = {
       name: "location",
       type: "text",
       key: "location",
-      val: "The Basement",
+      val: "San Diego",
       placeholder: "location",
       label: "Location",
     },

@@ -9,16 +9,17 @@ body {
 }
 .wrapper {
   width: 100%;
-  display: flex;
   justify-content: center;
   gap: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 .inputSection {
-  width: 30%;
+  /* width: 10%; */
 }
 .outputSection {
-  flex-grow: 1;
   height: 100vh;
   background-color: white;
   filter: drop-shadow(5px 5px 5px #858585);

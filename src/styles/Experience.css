@@ -12,20 +12,24 @@ textarea:focus {
   outline: #3e8bff solid 2px;
 }
 
+/* STYLE OUTPUT */
+
 .experienceOutput {
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
 
-.schoolName .infoElement:nth-last-child(-n + 4) {
-  color: red;
+.jobList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
-
 .jobOutput {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  padding: 0 10px;
 }
 
 .jobTopPart {

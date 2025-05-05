@@ -16,3 +16,36 @@ h3 {
 }
 
 /* ////////////////////////////////////// */
+/* STYLE OUPUT */
+.educationOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.schoolOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 10px;
+}
+
+.schoolUnit {
+  display: flex;
+  justify-content: space-between;
+}
+
+.schoolLeftPart {
+  display: flex;
+  flex-direction: column;
+}
+
+.schoolRightPart {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.schoolDate {
+  display: flex;
+}
