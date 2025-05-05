@@ -11,14 +11,10 @@ body {
   width: 100%;
   justify-content: center;
   gap: 2rem;
-
   display: grid;
   grid-template-columns: 1fr 2fr;
 }
 
-.inputSection {
-  /* width: 10%; */
-}
 .outputSection {
   /* min-height: 100vh; */
   height: fit-content;
@@ -28,12 +24,19 @@ body {
   position: sticky;
   top: 1rem;
   /* align-self: start; */
+
+  display: grid;
+  grid-template-rows: 1fr 6fr;
+  justify-content: center;
+  justify-items: center;
+  width: 100%;
 }
 
 .buttons {
   display: flex;
   gap: 10px;
 }
+
 button {
   width: 50px;
   height: 40px;
@@ -41,7 +44,6 @@ button {
   background-color: #cacaca;
   border: none;
   font-size: 1.5rem;
-  /* font-weight: 600; */
 }
 
 button:hover {
@@ -51,4 +53,9 @@ button:hover {
 
 .detailedInfoOutput {
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 90%;
 }
