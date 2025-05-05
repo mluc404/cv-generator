@@ -22,6 +22,28 @@ textarea:focus {
   color: red;
 }
 
-/* .schoolName {
-  color: blue;
-} */
+.jobOutput {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.jobTopPart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.jobDateLoc {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  font-size: 0.9rem;
+}
+
+.jobDate {
+  display: flex;
+}
+
+.jobBottomPart {
+  padding: 0 0.5rem;
+}
