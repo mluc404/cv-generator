@@ -3,7 +3,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 5px;
+  gap: 1rem;
   background-color: #013057;
   color: white;
   width: 100%;
@@ -22,4 +22,8 @@
 .contactInfo a {
   text-decoration: underline;
   color: white;
+}
+
+.personalInfoInput .inputIcon {
+  font-size: 1.5rem;
 }

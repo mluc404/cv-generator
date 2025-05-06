@@ -1,15 +1,4 @@
 /* STYLE INPUT */
-.schoolList {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-}
-
-.school {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
 
 h3 {
   border-bottom: #4c4c4c solid 2px;

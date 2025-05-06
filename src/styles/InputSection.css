@@ -7,17 +7,29 @@
 .inputBlock {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.8rem;
   background-color: white;
   filter: drop-shadow(5px 5px 5px #858585);
   border-radius: 14px;
-  padding: 1rem;
+  padding: 1.2rem;
+}
+
+.inputSectionHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  height: 2rem;
+}
+
+.inputIcon {
+  font-size: 2.5rem;
 }
 
 .infoElement {
   display: flex;
   flex-direction: column;
-  gap: 2px;
+  gap: 0.3rem;
 }
 
 .inputSection input {
@@ -25,7 +37,7 @@
   border-radius: 8px;
   border: none;
   background-color: #e5e5e5;
-  padding: 5px;
+  padding: 5px 10px;
   line-height: 1.5rem;
 }
 
@@ -43,7 +55,7 @@ input:focus {
   /* justify-content: center; */
   gap: 1rem;
   color: #0d163a;
-  /* padding-left: 0.5rem; */
+  padding-left: 0.5rem;
 }
 
 .printBtn {
@@ -68,4 +80,21 @@ input:focus {
 
 .githubLink a {
   display: flex;
+}
+
+.schoolList {
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  gap: 2rem;
+}
+
+.school {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.schoolList .buttons {
+  align-self: end;
 }

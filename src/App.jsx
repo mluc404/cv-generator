@@ -6,7 +6,7 @@ import { PersonalInfo } from "./components/PersonalInfo";
 import { Education } from "./components/Education";
 import { Experience } from "./components/Experience";
 
-import githubLogo from "../public/github-mark.png";
+import githubLogo from "./assets/github-mark.png";
 
 import "./App.css";
 import "./styles/InputSection.css";
@@ -26,18 +26,28 @@ function App() {
       <div className="wrapper">
         <div className="inputSection">
           <div className="inputBlock personalInfoInput">
-            <h2>Personal Details</h2>
+            <div className="inputSectionHeader">
+              <div className="inputIcon"> &#x1F464;</div>
+              <h2>Personal Details</h2>
+            </div>
             <PersonalInfo
               data={inputPersonalInfo}
               setData={setInputPersonalInfo}
             />
           </div>
           <div className="inputBlock educationInput">
-            <h2>Education</h2>
+            <div className="inputSectionHeader">
+              <div className="inputIcon">&#x1F393; </div>
+              <h2>Education</h2>
+            </div>
+
             <Education data={inputEducation} setData={setInputEducation} />
           </div>
           <div className="inputBlock experienceInput">
-            <h2>Experience</h2>
+            <div className="inputSectionHeader">
+              <div className="inputIcon">&#x1F4BC;</div>
+              <h2>Experience</h2>
+            </div>
             <Experience data={inputExperience} setData={setInputExperience} />
           </div>
           {/* Print resume */}
@@ -46,7 +56,11 @@ function App() {
               &#x1F5A8;
             </button>
             <div className="githubLink">
-              <a href="https://github.com/mluc404/cv-generator">
+              <a
+                href="https://github.com/mluc404/cv-generator"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <img
                   src={githubLogo}
                   alt="GitHub logo"
